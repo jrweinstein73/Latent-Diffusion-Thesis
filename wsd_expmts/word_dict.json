@@ -1,0 +1,36 @@
+
+{
+
+  "bat":      {"bat_animal": "Bat", "bat_baseball": "Baseball bat"},
+  "mouse":    {"mouse_animal": "Mouse", "mouse_computer": "Computer mouse"},
+  "organ":    {"organ_biology": "Organ (biology)", "organ_music": "Organ (music)"},
+  "cell":     {"cell_biology": "Cell (biology)", "cell_prison": "Prison cell"},
+  "cardinal": {"cardinal_church": "Cardinal (Catholic Church)", "cardinal_bird": ["Northern cardinal", "Cardinalidae", "Cardinalis"]},
+  "mint":     {"mint_plant": "Mentha", "mint_facility": "Mint (facility)"},
+  "tank":     {"tank_military": "Tank", "tank_storage": ["Storage tank", "Fuel tank", "Water tank"]},
+  "port":     {"port_harbor": "Port", "port_wine": "Port wine"},
+  "date":     {"date_fruit": "Date palm", "date_calendar": "Calendar date"},
+  "key":      {"key_lock": "Key (lock)", "key_music": "Key (music)"},
+  "apple":    {"apple_fruit": "Apple", "apple_inc": "Apple Inc."},
+  "bank":     {"bank_geography": "Bank (geography)", "bank_facility": "Bank"},
+  "bass":     {"bass_guitar": "Bass guitar", "bass_fish": "Bass (fish)"},
+  "bow":      {"bow_and_arrow": "Bow and arrow", "bow": "Bow (watercraft)"},
+  "chair":    {"chair_seat": "Chair", "chair_officer": "Chair (officer)"},
+  "crane":    {"crane_bird": "Crane (bird)", "crane_machine": "Crane (machine)"},
+  "club":     {"club_nightclub": "Nightclub", "club_weapon": "Club (weapon)"},
+  "deck":     {"deck_ship": "Deck (ship)", "deck_building": "Deck (building)"},
+  "digit":    {"digit_anatomy": ["Digit (anatomy)", "Finger", "Toe"], "digit_number": "Numerical digit"},
+  "hood":     {"hood_vehicle": "Hood (car)", "hood_headgear": "Hood (headgear)"},
+  "bill":     {"bill_law": "Bill (law)", "bill_beak": "Beak"},
+  "jam":      {"jam_food": "Fruit preserves", "jam_music": "Jam session"},
+  "mole":     {"mole_unit": "Mole (unit)", "mole_animal": "Mole (animal)"},
+  "pitcher":  {"pitcher_baseball": "Pitcher", "pitcher_container": ["Jug", "Pitcher (container)"]},
+  "pound":    {"pound_mass": "Pound (mass)", "pound_currency": "Pound sterling"},
+  "seal":     {"seal_emblem": "Seal (emblem)", "seal_animal": ["Pinniped", "Earless seal", "Eared seal"]},
+  "plant":    {"plant_organism": "Plant", "plant_power": ["Power station", "Factory"]},
+  "spring":   {"spring_season": "Spring (season)", "spring_device": "Spring (device)"},
+  "trunk":    {"trunk_car": "Trunk (car)", "trunk_tree": "Trunk (botany)"},
+  "yard":     {"yard_unit": "Yard", "yard_land": "Yard (land)"}
+
+}
+

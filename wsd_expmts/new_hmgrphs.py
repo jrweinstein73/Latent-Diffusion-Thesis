@@ -1,10 +1,11 @@
 """
 run_extraction.py
 
-Runs extract_wiki_senses.py from a file instead of the terminal.
-Edit the settings below, then press "Run" in your editor (VS Code,
-PyCharm, Spyder, etc.). Keep this file in the same folder as
-extract_wiki_senses.py and senses.json.
+Note: word_dict.json should be in the same folder and is a dictionary. For each homograph key, 
+multiple senses are given as values. Each value should have appropriate hyperlink/page associated with wiki data
+Format is dict[homograph] = str(value): str(wikipedia page)
+
+To confirm that all wiki pages exist, check_wiki.py should run and confirm before this script is run.
 """
 
 import json
@@ -21,15 +22,15 @@ import get_wikiWords  # the extraction script
 # ---------------------------------------------------------------------------
 # SETTINGS (to edit)
 # ---------------------------------------------------------------------------
-CONFIG_FILE  = "extra_words.json"        # currently contains only "bat"
+CONFIG_FILE  = "word_dict.json"        # contains a mix of CoarseWSD-20 words and custom homograph labels
 CONTACT      = "jweinstei1@haverford.edu"  # email or project URL for Wikipedia
-OUT_PREFIX   = "wiki_nat"           # output files start with this name
-MAX_ARTICLES = 1000                  # small cap for a quick test run
-PER_SENSE    = 10                   # sentences sampled per sense
-LOWERCASE    = False                # True only if COSMOS's BERT is uncased
+OUT_PREFIX   = "[DATASET]"           # output files start with this name
+MAX_ARTICLES = 1000                 # arbitrary cap to start
+PER_SENSE    = 10                   # sentences sampled per sense, 2 senses per word
+LOWERCASE    = False                # True only if COSMOS's BERT were uncased, but it's cased
 
 # ---------------------------------------------------------------------------
-# Hand the settings to the script exactly as if typed in a terminal.
+# Settings passed in exactly as written above.
 # ---------------------------------------------------------------------------
 sys.argv = [
     "extract_wiki_senses.py",
@@ -45,7 +46,7 @@ if LOWERCASE:
 get_wikiWords.main()
 
 # ---------------------------------------------------------------------------
-# Quick look at the results so you don't have to open the files.
+# Quick look to confirm functionality.
 # ---------------------------------------------------------------------------
 print("\n--- Counts per sense ---")
 with open(f"{OUT_PREFIX}_counts.json") as f:

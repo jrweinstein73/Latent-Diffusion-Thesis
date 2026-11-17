@@ -83,6 +83,7 @@ def backlinks(title, redirects_only=False):
     else:
         params["blredirect"] = 1  # also return pages that link via redirects
 
+
     while True:
         data = api_get(params)
         for item in data["query"]["backlinks"]:
@@ -96,7 +97,7 @@ def backlinks(title, redirects_only=False):
         if "continue" not in data:
             break
         params.update(data["continue"])
-        time.sleep(0.5)  # be polite between pages
+        time.sleep(0.5)  # small pause between pages
 
 
 def fetch_wikitext(titles, batch=50):
@@ -283,24 +284,31 @@ def main():
     rng = random.Random(args.seed)  # fixed seed = reproducible sampling
 
     all_rows, sampled, summary = [], [], {}
-    for word, senses in config.items():
+    for word, senses in config.items(): # word is a string (key), senses is a dict of var: wiki page
         word = word.lower()
         print(f"\n== {word} ==")
 
+        # A potential sense can either be one page (e.g. "Bat") or it can be a list of pages
+        # For ease, we treat both as lists 
+        # make a dict of sense (key) with values of its pages as a list of length ≥ 1
+        get_pages = {s: (p if isinstance(p, list) else [p]) for s,p in senses.items()}
+
         # Step 1: every title that counts as each sense (page + its redirects).
         target_to_sense = {}
-        for sense_id, page in senses.items():
-            target_to_sense[normalize_title(page)] = sense_id
-            for r in backlinks(page, redirects_only=True):
-                target_to_sense[normalize_title(r["title"])] = sense_id
+        for sense_id, pages in get_pages.items():
+            for page in pages:
+                target_to_sense[normalize_title(page)] = sense_id
+                for r in backlinks(page, redirects_only=True):
+                    target_to_sense[normalize_title(r["title"])] = sense_id
         print(f"  {len(target_to_sense)} titles map to {len(senses)} senses")
 
         # Step 2: articles linking to any sense (each fetched once).
         articles = set()
-        for sense_id, page in senses.items():
-            found = {p["title"] for p in islice(backlinks(page), args.max_articles)}
-            print(f"  {sense_id}: {len(found)} linking articles")
-            articles |= found
+        for sense_id, pages in get_pages.items():
+            for page in pages:
+                found = {p["title"] for p in islice(backlinks(page), args.max_articles)}
+                print(f"  {sense_id}: {len(found)} linking articles")
+                articles |= found
 
         # Steps 3–5: download, convert, extract; drop duplicate sentences.
         seen, rows = set(), []

@@ -1,0 +1,125 @@
+{
+  "note": "Counts reflect --max-articles caps; not a true sense-frequency estimate for heavily linked senses.",
+  "counts": {
+    "bat": {
+      "bat_animal": 59,
+      "bat_baseball": 43
+    },
+    "mouse": {
+      "mouse_animal": 61,
+      "mouse_computer": 310
+    },
+    "organ": {
+      "organ_biology": 52,
+      "organ_music": 222
+    },
+    "cell": {
+      "cell_biology": 184,
+      "cell_prison": 21
+    },
+    "cardinal": {
+      "cardinal_church": 405,
+      "cardinal_bird": 48
+    },
+    "mint": {
+      "mint_plant": 143,
+      "mint_facility": 339
+    },
+    "tank": {
+      "tank_military": 158,
+      "tank_storage": 22
+    },
+    "port": {
+      "port_harbor": 85,
+      "port_wine": 116
+    },
+    "date": {
+      "date_fruit": 51,
+      "date_calendar": 18
+    },
+    "key": {
+      "key_lock": 35,
+      "key_music": 315
+    },
+    "apple": {
+      "apple_fruit": 117,
+      "apple_inc": 360
+    },
+    "bank": {
+      "bank_geography": 125,
+      "bank_facility": 20
+    },
+    "bass": {
+      "bass_guitar": 32,
+      "bass_fish": 325
+    },
+    "bow": {
+      "bow_and_arrow": 62,
+      "bow": 389
+    },
+    "chair": {
+      "chair_seat": 84,
+      "chair_officer": 18
+    },
+    "crane": {
+      "crane_bird": 87,
+      "crane_machine": 245
+    },
+    "club": {
+      "club_nightclub": 16,
+      "club_weapon": 103
+    },
+    "deck": {
+      "deck_ship": 159,
+      "deck_building": 25
+    },
+    "digit": {
+      "digit_anatomy": 36,
+      "digit_number": 31
+    },
+    "hood": {
+      "hood_vehicle": 76,
+      "hood_headgear": 40
+    },
+    "bill": {
+      "bill_law": 232,
+      "bill_beak": 96
+    },
+    "jam": {
+      "jam_food": 213,
+      "jam_music": 84
+    },
+    "mole": {
+      "mole_unit": 114,
+      "mole_animal": 105
+    },
+    "pitcher": {
+      "pitcher_baseball": 393,
+      "pitcher_container": 31
+    },
+    "pound": {
+      "pound_mass": 54,
+      "pound_currency": 23
+    },
+    "seal": {
+      "seal_emblem": 201,
+      "seal_animal": 111
+    },
+    "plant": {
+      "plant_organism": 50,
+      "plant_power": 9
+    },
+    "spring": {
+      "spring_season": 573,
+      "spring_device": 185
+    },
+    "trunk": {
+      "trunk_car": 74,
+      "trunk_tree": 311
+    },
+    "yard": {
+      "yard_unit": 54,
+      "yard_land": 24
+    }
+  }
+}
