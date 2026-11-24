@@ -1,0 +1,8 @@
+# Minimal set for encode/decode/denoise with the pretrained checkpoints.
+# (The repo's full `uv sync` also pulls training/eval deps you don't need.)
+torch>=2.4
+transformers==4.48.0
+omegaconf==2.3.0
+torch-ema>=0.3
+numpy
+awscli
